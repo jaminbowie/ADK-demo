@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+
+    <TextView
+            android:id="@+id/header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pl.app.version.name"/>
+
+    <EditText android:id="@+id/edit_message"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_alignParentLeft="true"
+              android:layout_below="@id/header"
+              android:layout_toLeftOf="@+id/button_load"
+            android:text="http://link.theplatform.com/s/3JHsmB/RY2aUMsITdjguutJZtBWsbAmtq3AtSph?feed=MPEG4&amp;format=SMIL&amp;Tracking=true&amp;Embedded=true"
+            />
+
+    <Button android:id="@+id/button_set"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Play"
+            android:layout_below="@id/header"
+            android:onClick="setRelease" />
+
+    <Button android:id="@+id/button_load"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:text="Load"
+            android:layout_below="@id/header"
+            android:layout_toLeftOf="@+id/button_set"
+            android:onClick="loadRelease" />
+
+    <RelativeLayout android:id="@+id/tpPlayer"
+                 android:layout_width="fill_parent"
+                 android:layout_gravity="center_vertical"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/edit_message">
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
+
